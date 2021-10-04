@@ -30,6 +30,7 @@ jobs:
           push: true
           tags: dcandelero/rotten-potatoes:latest
   CD:
+    needs: [CI]
     runs-on: ubuntu-latest
 
     steps:
