@@ -29,7 +29,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: dcandelero/rotten-potatoes:latest
-                dcandelero/rotten-potatoes:v${{ github.run_number }}  
           
   CD:
     needs: [CI]
@@ -47,5 +46,5 @@ jobs:
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v1.3
         with:
-          images: dcandelero/rotten-potatoes:v${{ github.run_number }}
+          images: dcandelero/rotten-potatoes:latest
           manifests: k8s/deplyments.yaml
