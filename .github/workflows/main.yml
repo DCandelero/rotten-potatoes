@@ -47,4 +47,4 @@ jobs:
         uses: Azure/k8s-deploy@v1.3
         with:
           images: dcandelero/rotten-potatoes:latest
-          manifests: k8s/deplyments.yaml
+          manifests: k8s/deployments.yaml
